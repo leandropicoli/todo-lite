@@ -1,6 +1,7 @@
 <h1>{{title}}</h1>
 <ul>
   <li *ngFor="let todo of todos">{{todo.id}}. {{todo.title}} |
-    <button *ngIf="!todo.done">Done</button> |
+    <button *ngIf="!todo.done" (click)="markAsDone(todo)">Done</button> |
+    <button *ngIf="todo.done" (click)="markAsUndone(todo)">Redo</button> |
     <button (click)="remove(todo)">Delete</button></li>
 </ul>
