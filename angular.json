@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "todo-lite"
+    }
+  },
+  "defaultProject": "todo-lite",
+  "cli": {
+    "analytics": "57083008-5599-401d-966e-b9f4fa65654e"
+  }
 }

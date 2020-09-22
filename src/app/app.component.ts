@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo-lite';
+  public todos: any[] = [];
+  public title: String = 'My tasks';
+
+  constructor() {
+    this.todos.push('study angular');
+    this.todos.push('study csharp');
+    this.todos.push('go shopping');
+  }
+
+  changeText() {
+    this.title = 'Title changed'
+  }
 }
