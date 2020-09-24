@@ -8,17 +8,18 @@
 </ul>
 
 <div id="modal" *ngIf="mode=='add'" class="animated flipInX">
+  <h1 class="text-center">New Task</h1>
   <form [formGroup]="form">
-    <fieldset>
-      <label>Task</label>
-      <input type="text" placeholder="Task title" maxlength="60" formControlName="title">
-      <small *ngIf="form.controls.title.invalid && !form.controls.title.pristine">This field must have at least 3
-        characters
-        and max 60 characters
-        length</small>
-      <button class="button" [disabled]="form.invalid" (click)="add()">Save</button>
-    </fieldset>
-  </form>
+    <input type="text" placeholder="Task title" maxlength="60" formControlName="title">
+    <small class="danger" *ngIf="form.controls.title.invalid && !form.controls.title.pristine">This field must have at
+      least 3
+      characters
+      and max 60 characters
+      length <br></small>
+    <p class="text-center">
+      <button class="button" [disabled]="form.invalid" (click)="add()"> <i class="far fa-save"></i>Save</button>
+    </p>
+  </form><br>
 </div>
 
 <button class="add-button animated fadeInUp button" (click)="changeMode('add')" *ngIf="mode=='list'">
